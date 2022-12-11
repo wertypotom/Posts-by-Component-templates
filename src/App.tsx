@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import PostItem from './components/Post/Post';
-import { IPost } from './styles/Posts';
+import PostList from './components/PostList/PostList';
+import { IPost } from './interfaces/Posts';
 
 function App() {
   const [posts, setPosts] = useState<IPost[]>([
@@ -23,9 +24,7 @@ function App() {
   ]);
   return (
     <div className='app'>
-      {posts.map((post) => (
-        <PostItem post={post} />
-      ))}
+      <PostList posts={posts} title='Мои посты' />
     </div>
   );
 }

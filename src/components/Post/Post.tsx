@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IPost } from '../../styles/Posts';
+import { IPost } from '../../interfaces/Posts';
 import './Post.css';
 
 interface PostProps {
