@@ -10,6 +10,10 @@ interface PostListProps {
 }
 
 const PostList = ({ posts, removePost, title }: PostListProps) => {
+  if (!posts.length) {
+    return <h3>No posts found...</h3>;
+  }
+
   return (
     <div className='postList'>
       <h1>{title}</h1>

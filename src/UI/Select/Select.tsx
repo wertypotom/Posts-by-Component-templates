@@ -1,15 +1,11 @@
 import React from 'react';
+import { ISelectOption } from '../../interfaces/Sort';
 import './Select.css';
-
-interface SelectOption {
-  value: string;
-  title: string;
-}
 
 interface SelectProps {
   value: string;
   sortPosts: (e: string) => void;
-  options: SelectOption[];
+  options: ISelectOption[];
   devaultValue: string;
 }
 

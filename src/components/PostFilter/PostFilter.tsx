@@ -1,12 +1,8 @@
 import React from 'react';
+import { IFilterState } from '../../interfaces/Sort';
 import Input from '../../UI/Input/Input';
 import Select from '../../UI/Select/Select';
 import './PostFilter.css';
-
-interface IFilterState {
-  sort: string;
-  query: string;
-}
 
 interface PostFilterProps {
   filter: IFilterState;
