@@ -1,23 +1,26 @@
 import React, { FC } from 'react';
 import { IPost } from '../../interfaces/Posts';
+import Button from '../../UI/Button/Button';
 import './Post.css';
 
 interface PostProps {
   post: IPost;
+  number: number;
+  removePost: (post: IPost) => void;
 }
 
-const Post = ({ post }: PostProps) => {
-  const { body, id, title } = post;
+const Post = ({ post, number, removePost }: PostProps) => {
+  const { body, title } = post;
 
   return (
     <div className='Post' data-testid='Post'>
       <div className='post__ccontent'>
         <strong>
-          {id}. {title}
+          {number}. {title || 'Some title'}
         </strong>
-        <div>{body}</div>
+        <div>{body || 'Some body'}</div>
       </div>
-      <button className='post__btns'>Remove</button>
+      <Button onClick={() => removePost(post)}>Remove</Button>
     </div>
   );
 };

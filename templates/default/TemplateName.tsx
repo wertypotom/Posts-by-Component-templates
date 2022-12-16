@@ -3,7 +3,7 @@ import './TemplateName.css';
 
 interface TemplateNameProps {}
 
-const TemplateName: React.FC<TemplateNameProps> = ({}) => {
+const TemplateName = ({}: TemplateNameProps) => {
   return <div className='templateName'>TemplateName</div>;
 };
 

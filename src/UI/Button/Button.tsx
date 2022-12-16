@@ -1,10 +1,19 @@
 import React from 'react';
 import './Button.css';
 
-interface ButtonProps {}
+interface ButtonProps {
+  onClick?(): void;
+  type?: 'button' | 'submit';
+  children: React.ReactNode;
+  disabled?: boolean;
+}
 
-const Button: React.FC<ButtonProps> = ({}) => {
-  return <div className='button'>Button component</div>;
+const Button = ({ children, type = 'button', ...rest }: ButtonProps) => {
+  return (
+    <button type={type} {...rest}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

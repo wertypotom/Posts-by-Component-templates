@@ -6,14 +6,20 @@ import PostItem from './../Post/Post';
 interface PostListProps {
   posts: IPost[];
   title: string;
+  removePost: (post: IPost) => void;
 }
 
-const PostList: React.FC<PostListProps> = ({ posts, title }) => {
+const PostList = ({ posts, removePost, title }: PostListProps) => {
   return (
     <div className='postList'>
       <h1>{title}</h1>
-      {posts.map((post) => (
-        <PostItem key={post.id} post={post} />
+      {posts.map((post, index) => (
+        <PostItem
+          removePost={removePost}
+          number={index + 1}
+          key={post.id}
+          post={post}
+        />
       ))}
     </div>
   );
