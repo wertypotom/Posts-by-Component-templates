@@ -1,0 +1,10 @@
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.page-active {
+  font-weight: bold;
+  color: teal;
+}
