@@ -1,0 +1,16 @@
+.navbar {
+  padding: 20px 20px 20px 0;
+  width: 400px;
+  display: flex;
+  column-gap: 20px;
+  background: teal;
+  width: 100vw;
+}
+
+.link {
+  color: black;
+}
+
+.link-active {
+  color: red;
+}

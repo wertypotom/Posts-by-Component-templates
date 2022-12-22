@@ -1,0 +1,4 @@
+.error-goback:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
