@@ -1,4 +1,4 @@
-export const getPages = (totalPostCount: number, limit: number) => {
+export const getPages = (totalPostCount: number, limit: number): number[] => {
   const pagesNum = Math.ceil(totalPostCount / limit);
   const pages = [];
 

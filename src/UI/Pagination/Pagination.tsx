@@ -8,16 +8,19 @@ interface PaginationProps {
   onPageChange: (i: number) => void;
 }
 
-const Pagination = ({ currentPage, pages, onPageChange }: PaginationProps) => {
-  return (
-    <div className='pagination'>
-      {pages.map((i) => (
-        <Button key={i} onClick={() => onPageChange(i)}>
-          <span className={currentPage === i ? 'page-active' : ''}>{i}</span>
-        </Button>
-      ))}
-    </div>
-  );
-};
+const Pagination = React.memo(
+  ({ currentPage, pages, onPageChange }: PaginationProps) => {
+    console.log('pages ', pages);
+    return (
+      <div className='pagination'>
+        {pages.map((i) => (
+          <Button key={i} onClick={() => onPageChange(i)}>
+            <span className={currentPage === i ? 'page-active' : ''}>{i}</span>
+          </Button>
+        ))}
+      </div>
+    );
+  }
+);
 
 export default Pagination;

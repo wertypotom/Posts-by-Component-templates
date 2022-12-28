@@ -19,7 +19,7 @@ export const usePosts = (posts: IPost[], sort: string, searchQuery: string) => {
 
   const sortedAndSearchedPosts = useMemo(() => {
     return sortedPosts.filter((post) =>
-      post.title.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase())
+      post.title?.toLocaleLowerCase().includes(searchQuery.toLocaleLowerCase())
     );
   }, [sortedPosts, searchQuery]);
 
